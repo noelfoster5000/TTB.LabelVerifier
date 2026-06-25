@@ -80,7 +80,7 @@ ResultCard Style	Reusable card UI for polished output
 📥 Installation & Running
 1. Clone the repository									
 	Code
-    git clone https://github.com/yourusername/TTB.LabelVerifier.git
+    git clone https://github.com/noelfoster5000/TTB.LabelVerifier.git
 
 2. Open in Visual Studio
 	• Requires Visual Studio 2022 or later
