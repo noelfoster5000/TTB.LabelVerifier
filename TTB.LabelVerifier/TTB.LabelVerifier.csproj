@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="TTB.LabelVerifier.Core\Models\**" />
+    <Compile Remove="TTB.LabelVerifier.Tests\**" />
+    <Compile Remove="TTB.LabelVerifier.UI\Resources\**" />
+    <EmbeddedResource Remove="TTB.LabelVerifier.Core\Models\**" />
+    <EmbeddedResource Remove="TTB.LabelVerifier.Tests\**" />
+    <EmbeddedResource Remove="TTB.LabelVerifier.UI\Resources\**" />
+    <None Remove="TTB.LabelVerifier.Core\Models\**" />
+    <None Remove="TTB.LabelVerifier.Tests\**" />
+    <None Remove="TTB.LabelVerifier.UI\Resources\**" />
+    <Page Remove="TTB.LabelVerifier.Core\Models\**" />
+    <Page Remove="TTB.LabelVerifier.Tests\**" />
+    <Page Remove="TTB.LabelVerifier.UI\Resources\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="TTB.LabelVerifier.UI\ViewModels\OCRViewModel.cs" />
+    <Compile Remove="TTB.LabelVerifier.UI\ViewModels\SettingsViewModel.cs" />
+    <Compile Remove="TTB.LabelVerifier.UI\Views\OCRView.xaml.cs" />
+    <Compile Remove="TTB.LabelVerifier.UI\Views\SettingsView.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Remove="TTB.LabelVerifier.UI\Views\OCRView.xaml" />
+    <Page Remove="TTB.LabelVerifier.UI\Views\SettingsView.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="TTB.LabelVerifier.Core\Models\ComparisonResult.cs" />
+    <Compile Include="TTB.LabelVerifier.Core\Models\LabelFields.cs" />
+  </ItemGroup>
+
+</Project>

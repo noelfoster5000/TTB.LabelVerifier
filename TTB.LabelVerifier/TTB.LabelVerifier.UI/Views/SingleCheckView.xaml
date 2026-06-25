@@ -1,0 +1,97 @@
+﻿<UserControl x:Class="TTB.LabelVerifier.UI.Views.SingleCheckView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="900">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- HEADER -->
+        <TextBlock Text="Single Label Check"
+                   FontSize="26"
+                   FontWeight="Bold"
+                   Foreground="#2D4A7A"
+                   Margin="0 0 0 20"/>
+
+        <!-- INPUT CARD -->
+        <Border Grid.Row="1"
+                Background="White"
+                BorderBrush="#DDDDDD"
+                BorderThickness="1"
+                CornerRadius="8"
+                Padding="15"
+                Margin="0 0 0 20">
+
+            <StackPanel>
+
+                <TextBlock Text="Full Label Text"
+                           FontSize="16"
+                           FontWeight="SemiBold"
+                           Foreground="#333"
+                           Margin="0 0 0 8"/>
+
+                <TextBox Text="{Binding FullLabelText, UpdateSourceTrigger=PropertyChanged}"
+                         AcceptsReturn="True"
+                         TextWrapping="Wrap"
+                         Height="140"
+                         FontSize="14"
+                         BorderBrush="#CCCCCC"/>
+
+                <Button Content="Extract Fields"
+                        Command="{Binding ExtractFieldsCommand}"
+                        Width="160"
+                        Height="40"
+                        Background="#2D4A7A"
+                        Foreground="White"
+                        FontWeight="SemiBold"
+                        BorderThickness="0"
+                        Margin="0 15 0 0"
+                        HorizontalAlignment="Left"/>
+            </StackPanel>
+        </Border>
+
+        <!-- RESULTS CARD -->
+        <Border Grid.Row="2"
+                Style="{StaticResource ResultCard}"
+                Padding="15">
+
+            <StackPanel>
+
+                <TextBlock Text="Extracted Fields"
+                           FontSize="18"
+                           FontWeight="Bold"
+                           Foreground="#2D4A7A"
+                           Margin="0 0 0 10"/>
+
+                <TextBlock Text="{Binding ExtractedBrand}"
+                           FontSize="14"
+                           Foreground="#444"
+                           Margin="0 5"/>
+
+                <TextBlock Text="{Binding ExtractedABV}"
+                           FontSize="14"
+                           Foreground="#444"
+                           Margin="0 5"/>
+
+                <TextBlock Text="{Binding ExtractedNetContents}"
+                           FontSize="14"
+                           Foreground="#444"
+                           Margin="0 5"/>
+
+                <TextBlock Text="{Binding ExtractedClassType}"
+                           FontSize="14"
+                           Foreground="#444"
+                           Margin="0 5"/>
+
+            </StackPanel>
+        </Border>
+
+    </Grid>
+</UserControl>

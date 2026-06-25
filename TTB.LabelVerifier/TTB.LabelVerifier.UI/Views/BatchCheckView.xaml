@@ -1,0 +1,86 @@
+﻿<UserControl x:Class="TTB.LabelVerifier.UI.Views.BatchCheckView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             d:DesignHeight="600" d:DesignWidth="900">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- HEADER -->
+        <TextBlock Text="Batch Label Processing"
+                   FontSize="26"
+                   FontWeight="Bold"
+                   Foreground="#2D4A7A"
+                   Margin="0 0 0 20"/>
+
+        <!-- INPUT + BUTTON -->
+        <StackPanel Grid.Row="0" Margin="0 50 0 0">
+
+            <Border Background="White"
+                    BorderBrush="#DDDDDD"
+                    BorderThickness="1"
+                    CornerRadius="8"
+                    Padding="15"
+                    Margin="0 0 0 20">
+                <StackPanel>
+                    <TextBlock Text="Paste multiple labels below (separate with ---)"
+                               FontSize="14"
+                               Foreground="#555"
+                               Margin="0 0 0 8"/>
+
+                    <TextBox Text="{Binding BatchInput}"
+                             AcceptsReturn="True"
+                             TextWrapping="Wrap"
+                             Height="150"
+                             FontSize="14"
+                             BorderBrush="#CCCCCC"/>
+                </StackPanel>
+            </Border>
+
+            <Button Content="Process Batch"
+                    Command="{Binding ProcessBatchCommand}"
+                    Width="180"
+                    Height="42"
+                    Background="#2D4A7A"
+                    Foreground="White"
+                    FontWeight="SemiBold"
+                    BorderThickness="0"
+                    HorizontalAlignment="Left"
+                    Margin="0 10 0 20"/>
+        </StackPanel>
+
+        <!-- RESULTS -->
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+            <ItemsControl ItemsSource="{Binding BatchResults}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border Style="{StaticResource ResultCard}">
+                            <StackPanel>
+
+                                <!-- Label Title -->
+                                <TextBlock Text="{Binding LabelName}"
+                                           FontSize="18"
+                                           FontWeight="Bold"
+                                           Foreground="#2D4A7A"
+                                           Margin="0 0 0 8"/>
+
+                                <!-- Result Content -->
+                                <TextBlock Text="{Binding ResultText}"
+                                           TextWrapping="Wrap"
+                                           FontSize="14"
+                                           Foreground="#444"/>
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+
+    </Grid>
+</UserControl>
