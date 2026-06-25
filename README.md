@@ -104,9 +104,16 @@ https://github.com/noelfoster5000/TTB.LabelVerifier/releases
 After downloading, extract the ZIP and run `TTB.LabelVerifier.exe`.
 
 
-➡ Single Label Check  
+
+
+
+---
+
+```
+## ➡ Single Label Check
 Use the Single screen to extract fields and validate the Government Warning.
 
+```
 Example Input:
 SUNSET RIDGE DISTILLERY
 Kentucky Straight Bourbon Whiskey
@@ -116,11 +123,14 @@ Kentucky Straight Bourbon Whiskey
 GOVERNMENT WARNING:
 (1) According to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of birth defects.
 (2) Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery, and may cause health problems.
+```
 
+---
 
-➡ Batch Label Processing  
+## ➡ Batch Label Processing
 Use the Batch screen to process multiple labels separated by ---.
 
+```
 Example Input:
 SUNSET RIDGE DISTILLERY
 45% ALC./VOL.
@@ -133,6 +143,10 @@ BLUE HARBOR WINES
 OLD TOM DISTILLERY
 90 PROOF
 750 ML
+```
+```
+
+---
 
 
 
