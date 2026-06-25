@@ -97,7 +97,19 @@ TTB.LabelVerifier
 
 ## 📥 Installation & Running
 
-### 1. Clone the repository
+## 🔗 Download
+Download the latest compiled version from the Releases page:
+https://github.com/noelfoster5000/TTB.LabelVerifier/releases
 
-```bash
-git clone https://github.com/noelfoster5000/TTB.LabelVerifier.git
+After downloading, extract the ZIP and run `TTB.LabelVerifier.exe`.
+
+
+➡ Single Label Check  
+Use the Single screen to extract fields and validate the Government Warning.
+
+➡ Batch Label Processing  
+Use the Batch screen to process multiple labels separated by ---.
+
+➡ Architecture & Components  
+See the breakdown of MVVM structure and core modules below.
+
