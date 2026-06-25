@@ -16,9 +16,10 @@ This project was built as part of a technical assessment and demonstrates:
 	• Batch processing
 	• Maintainable, testable code structure
 
-🧱 Architecture
+## 🧱 Architecture
 The application follows a clean MVVM structure:
-Code
+
+```
 TTB.LabelVerifier
 │
 ├── Core
@@ -34,6 +35,8 @@ TTB.LabelVerifier
 │   └── Styles
 │
 └── App.xaml / MainWindow.xaml
+```
+
 
 Key Components
 Component	Responsibility
