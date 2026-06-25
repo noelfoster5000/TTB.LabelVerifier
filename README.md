@@ -104,12 +104,6 @@ https://github.com/noelfoster5000/TTB.LabelVerifier/releases
 After downloading, extract the ZIP and run `TTB.LabelVerifier.exe`.
 
 
-
-
-
----
-
-```
 ## ➡ Single Label Check
 Use the Single screen to extract fields and validate the Government Warning.
 
@@ -125,7 +119,6 @@ GOVERNMENT WARNING:
 (2) Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery, and may cause health problems.
 ```
 
----
 
 ## ➡ Batch Label Processing
 Use the Batch screen to process multiple labels separated by ---.
@@ -144,9 +137,7 @@ OLD TOM DISTILLERY
 90 PROOF
 750 ML
 ```
-```
 
----
 
 
 
