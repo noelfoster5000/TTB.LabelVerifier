@@ -107,9 +107,32 @@ After downloading, extract the ZIP and run `TTB.LabelVerifier.exe`.
 ➡ Single Label Check  
 Use the Single screen to extract fields and validate the Government Warning.
 
+Example Input:
+SUNSET RIDGE DISTILLERY
+Kentucky Straight Bourbon Whiskey
+45% ALC./VOL. (90 PROOF)
+750 mL
+
+GOVERNMENT WARNING:
+(1) According to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of birth defects.
+(2) Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery, and may cause health problems.
+
+
 ➡ Batch Label Processing  
 Use the Batch screen to process multiple labels separated by ---.
 
-➡ Architecture & Components  
-See the breakdown of MVVM structure and core modules below.
+Example Input:
+SUNSET RIDGE DISTILLERY
+45% ALC./VOL.
+750 mL
+---
+BLUE HARBOR WINES
+13.5% ALC./VOL.
+750 ML
+---
+OLD TOM DISTILLERY
+90 PROOF
+750 ML
+
+
 
